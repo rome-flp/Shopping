@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "sales women men accessories"
+    "new women shoes shoes";
+    grid-gap: 1rem;
+    font-family: Padauk, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+#carousel{
+    background-image: url("images/atikh-bana-_KaMTEmJnxY-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: -6rem;
+    height: 30rem;
+}
+
+#sales{
+    background-image: url("images/zahir-namane-TjUJJACTav4-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: -3.5rem;
+    grid-area: sales;
+}
+
+#women{
+    background-image: url("images/naeim-jafari-laobUPA4jR8-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: women;
+}
+
+#men{
+    background-image: url("images/javier-reyes-qi2cD5oR_fE-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: men;
+}
+
+#accessories{
+    background-image: url("images/charles-deluvio-Pk3gCC49mCk-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: 2rem;
+    grid-area: accessories;
+}
+
+#new{
+    background-image: url("images/luobulinka-FO4mQZi1c0M-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: -2rem;
+    grid-area: new;
+}
+
+#shoes{
+    background-image: url("images/whereslugo-ad047kyPBh8-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-y: -2rem;
+    grid-area: shoes;
+}
+
+
+.button{
+    text-decoration: none;
+    color: #212121;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out all;
+}
+
+.button:hover{
+    background-color: #3079F3;
+    color: white;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out all;
+}
+
+.center:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 1fr 2fr 2fr 2.5fr;
+        grid-template-areas: 
+        "men"
+        "accessories"
+        "shoes"
+        "sales"
+        "new"
+        "women";
+        padding: 1rem 0;
+    }
+
+    #carousel{
+        height: 15rem;
+        background-position-y: -1.5rem;
+    }
+
+    #men{
+        height: 25rem;
+        background-position-y: -5rem;
+    }
+
+    #accessories{
+        height: 20rem;
+        background-position-y: -1.5rem;
+    }
+
+    #shoes{
+        height: 15rem;
+    }
+
+    #sales{
+        height: 20rem;
+        background-position-y: -10rem;
+    }
+
+    #new{
+        height: 20rem;
+        background-position-y: -4rem;
+    }
+
+    #women{
+        height: 40rem;
+        background-position-y: -1.5rem;
+    }
+
+    .button{
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+}
+
